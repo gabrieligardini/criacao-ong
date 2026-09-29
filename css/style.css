@@ -29,6 +29,42 @@
     --espaco-5: 3rem;
 }
 
+/* Modo de alto contraste */
+.alto-contraste {
+    --cor-primaria: #000000;
+    --cor-primaria-escura: #000000;
+    --cor-secundaria: #FFFFFF;
+    --cor-destaque: #FFFF00;
+    --cor-fundo: #000000;
+    --cor-superficie: #000000;
+    --cor-texto: #FFFFFF;
+    --cor-texto-suave: #FFFFFF;
+    --cor-borda: #FFFFFF;
+}
+
+#alternar-contraste {
+    border: 2px solid #FFFFFF;
+}
+
+.alto-contraste #alternar-contraste {
+    background-color: #FFFF00;
+    color: #000000;
+    border-color: #FFFF00;
+}
+
+.alto-contraste a {
+    color: #FFFF00;
+}
+
+.alto-contraste button:focus,
+.alto-contraste a:focus,
+.alto-contraste input:focus,
+.alto-contraste select:focus,
+.alto-contraste summary:focus {
+    outline: 3px solid #FFFF00;
+    outline-offset: 3px;
+}
+
 /* Estilos gerais */
 body {
     margin: 0;
