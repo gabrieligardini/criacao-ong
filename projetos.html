@@ -23,8 +23,11 @@
 
         <nav aria-label="Navegação principal">
 
+            <!-- Menu mobile -->
             <details class="menu-mobile">
-                <summary aria-label="Abrir ou fechar menu">☰ Menu</summary>
+                <summary aria-label="Abrir ou fechar menu">
+                    ☰ Menu
+                </summary>
 
                 <ul>
                     <li><a href="index.html">Início</a></li>
@@ -35,6 +38,7 @@
                 </ul>
             </details>
 
+            <!-- Menu desktop -->
             <ul class="menu-desktop">
                 <li><a href="index.html">Início</a></li>
 
@@ -54,6 +58,15 @@
             </ul>
 
         </nav>
+
+        <!-- Controle de acessibilidade -->
+        <button
+            type="button"
+            id="alternar-contraste"
+            aria-pressed="false">
+            Alto contraste
+        </button>
+
     </header>
 
     <!-- Conteúdo principal -->
@@ -143,7 +156,9 @@
 
                         <span class="badge badge-adocao">Adoção</span>
                         <span class="badge badge-doacao">Doações</span>
-                        <span class="badge badge-voluntariado">Voluntariado</span>
+                        <span class="badge badge-voluntariado">
+                            Voluntariado
+                        </span>
                     </div>
 
                     <div class="feedback-item">
@@ -163,7 +178,10 @@
 
                         <div class="toast" role="status">
                             <strong>Obrigado por participar!</strong>
-                            <p>Seu interesse em ajudar a AUma Gêmea foi registrado.</p>
+                            <p>
+                                Seu interesse em ajudar a AUma Gêmea
+                                foi registrado.
+                            </p>
                         </div>
                     </div>
 
@@ -176,12 +194,17 @@
 
     <!-- Rodapé -->
     <footer>
-        <p>&copy; 2026 AUma Gêmea. Todos os direitos reservados.</p>
+        <p>
+            &copy; 2026 AUma Gêmea. Todos os direitos reservados.
+        </p>
 
         <a href="mailto:contato@aumagemea.com.br">
             contato@aumagemea.com.br
         </a>
     </footer>
+
+    <!-- JavaScript -->
+    <script type="module" src="js/main.js"></script>
 
 </body>
 
