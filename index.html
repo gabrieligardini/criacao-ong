@@ -22,32 +22,69 @@
         </div>
 
         <nav aria-label="Navegação principal">
+
+            <!-- Menu mobile -->
             <details class="menu-mobile">
                 <summary aria-label="Abrir ou fechar menu">☰ Menu</summary>
+
                 <ul>
-                    <li><a href="#sobre">Sobre nós</a></li>
-                    <li><a href="#adocao">Adoção</a></li>
-                    <li><a href="#contato">Contato</a></li>
-                    <li><a href="projetos.html">Projetos</a></li>
-                    <li><a href="cadastro.html">Cadastro</a></li>
+                    <li>
+                        <a href="#sobre" data-page="inicio">Sobre nós</a>
+                    </li>
+
+                    <li>
+                        <a href="#adocao" data-page="adocao">Adoção</a>
+                    </li>
+
+                    <li>
+                        <a href="#contato">Contato</a>
+                    </li>
+
+                    <li>
+                        <a href="projetos.html" data-page="projetos">Projetos</a>
+                    </li>
+
+                    <li>
+                        <a href="cadastro.html">Cadastro</a>
+                    </li>
                 </ul>
             </details>
 
+            <!-- Menu desktop -->
             <ul class="menu-desktop">
-                <li><a href="#sobre">Sobre nós</a></li>
+
+                <li>
+                    <a href="#sobre" data-page="inicio">Sobre nós</a>
+                </li>
 
                 <li class="dropdown">
                     <details>
                         <summary>Adoção</summary>
+
                         <ul class="submenu">
-                            <li><a href="#adocao">Adoção responsável</a></li>
-                            <li><a href="projetos.html">Projetos</a></li>
+                            <li>
+                                <a href="#adocao" data-page="adocao">
+                                    Adoção responsável
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="projetos.html" data-page="projetos">
+                                    Projetos
+                                </a>
+                            </li>
                         </ul>
                     </details>
                 </li>
 
-                <li><a href="#contato">Contato</a></li>
-                <li><a href="cadastro.html">Cadastro</a></li>
+                <li>
+                    <a href="#contato">Contato</a>
+                </li>
+
+                <li>
+                    <a href="cadastro.html">Cadastro</a>
+                </li>
+
             </ul>
         </nav>
     </header>
@@ -55,13 +92,14 @@
     <!-- Conteúdo principal -->
     <main class="grid">
 
-        <div class="grid-conteudo">
+        <div class="grid-conteudo" id="conteudo-principal">
 
             <!-- Apresentação -->
             <section id="sobre">
                 <h2>Encontre seu novo melhor amigo</h2>
 
-                <img class="imagem-adocao" src="img/animais-adocao.jpg"
+                <img class="imagem-adocao"
+                    src="img/animais-adocao.jpg"
                     alt="Cachorro e gato esperando por uma família para adoção">
 
                 <p>
@@ -132,6 +170,9 @@
             &copy; 2026 AUma Gêmea. Todos os direitos reservados.
         </p>
     </footer>
+
+    <!-- JavaScript -->
+    <script type="module" src="js/main.js"></script>
 
 </body>
 

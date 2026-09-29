@@ -24,6 +24,7 @@
 
             <details class="menu-mobile">
                 <summary aria-label="Abrir ou fechar menu">☰ Menu</summary>
+
                 <ul>
                     <li><a href="index.html">Início</a></li>
                     <li><a href="index.html#adocao">Adoção</a></li>
@@ -72,7 +73,10 @@
                     nossas ações.
                 </p>
 
-                <form action="#" method="post">
+                <!-- Histórico recuperado do localStorage -->
+                <p id="historico-cadastros"></p>
+
+                <form id="form-cadastro" action="#" method="post">
 
                     <!-- Dados pessoais -->
                     <fieldset>
@@ -85,7 +89,13 @@
                         <input type="email" id="email" name="email" required>
 
                         <label for="nascimento">Data de nascimento:</label>
-                        <input type="date" id="nascimento" name="nascimento" required>
+                        <input
+                            type="date"
+                            id="nascimento"
+                            name="nascimento"
+                            required>
+
+                        <small id="idade-calculada"></small>
 
                         <label for="cpf">CPF:</label>
                         <input
@@ -113,7 +123,11 @@
                         <legend>Endereço</legend>
 
                         <label for="endereco">Endereço:</label>
-                        <input type="text" id="endereco" name="endereco" required>
+                        <input
+                            type="text"
+                            id="endereco"
+                            name="endereco"
+                            required>
 
                         <label for="cep">CEP:</label>
                         <input
@@ -126,7 +140,11 @@
                             required>
 
                         <label for="cidade">Cidade:</label>
-                        <input type="text" id="cidade" name="cidade" required>
+                        <input
+                            type="text"
+                            id="cidade"
+                            name="cidade"
+                            required>
 
                         <label for="estado">Estado:</label>
                         <select id="estado" name="estado" required>
@@ -142,17 +160,34 @@
                     <fieldset>
                         <legend>Como deseja participar?</legend>
 
-                        <input type="radio" id="adocao" name="interesse" value="adocao" required>
+                        <input
+                            type="radio"
+                            id="adocao"
+                            name="interesse"
+                            value="adocao"
+                            required>
                         <label for="adocao">Adoção</label>
 
-                        <input type="radio" id="voluntariado" name="interesse" value="voluntariado">
+                        <input
+                            type="radio"
+                            id="voluntariado"
+                            name="interesse"
+                            value="voluntariado">
                         <label for="voluntariado">Voluntariado</label>
 
-                        <input type="radio" id="doacao" name="interesse" value="doacao">
+                        <input
+                            type="radio"
+                            id="doacao"
+                            name="interesse"
+                            value="doacao">
                         <label for="doacao">Doação</label>
                     </fieldset>
 
-                    <button type="submit">Enviar cadastro</button>
+                    <button type="submit">
+                        Enviar cadastro
+                    </button>
+
+                    <p id="mensagem-formulario" role="status"></p>
 
                 </form>
 
@@ -163,8 +198,16 @@
     </main>
 
     <footer>
-        <p>&copy; 2026 AUma Gêmea. Todos os direitos reservados.</p>
+        <p>
+            &copy; 2026 AUma Gêmea. Todos os direitos reservados.
+        </p>
     </footer>
+
+    <!-- Biblioteca Day.js -->
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+
+    <!-- JavaScript da aplicação -->
+    <script type="module" src="js/main.js"></script>
 
 </body>
 
