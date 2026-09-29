@@ -150,36 +150,49 @@ export function iniciarFormulario() {
     });
 
 
-    const campoNascimento =
-        document.querySelector("#nascimento");
+const campoNascimento =
+    document.querySelector("#nascimento");
 
-    const idadeCalculada =
-        document.querySelector("#idade-calculada");
+const idadeCalculada =
+    document.querySelector("#idade-calculada");
 
-    if (
+if (
     campoNascimento &&
     idadeCalculada &&
     typeof dayjs !== "undefined"
 ) {
+    const hoje = dayjs().format("YYYY-MM-DD");
 
-        campoNascimento.addEventListener(
-            "change",
-            () => {
+    campoNascimento.max = hoje;
 
-                if (campoNascimento.value) {
-                    const nascimento =
-                        dayjs(campoNascimento.value);
-
-                    const idade =
-                        dayjs().diff(
-                            nascimento,
-                            "year"
-                        );
-
-                    idadeCalculada.textContent =
-                        `Idade: ${idade} anos`;
-                }
+    campoNascimento.addEventListener(
+        "change",
+        () => {
+            if (!campoNascimento.value) {
+                idadeCalculada.textContent = "";
+                return;
             }
-        );
-    }
+
+            const nascimento =
+                dayjs(campoNascimento.value);
+
+            if (nascimento.isAfter(dayjs(), "day")) {
+                idadeCalculada.textContent =
+                    "A data de nascimento não pode ser futura.";
+
+                campoNascimento.value = "";
+                return;
+            }
+
+            const idade =
+                dayjs().diff(
+                    nascimento,
+                    "year"
+                );
+
+            idadeCalculada.textContent =
+                `Idade: ${idade} anos`;
+        }
+    );
+}
 }
