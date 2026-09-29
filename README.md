@@ -2,51 +2,60 @@
 
 **Um novo aumigo, uma nova paixão.**
 
-AUma Gêmea é um projeto acadêmico desenvolvido com o objetivo de praticar conceitos de desenvolvimento Front-End por meio da criação de uma plataforma voltada à adoção responsável de animais.
+AUma Gêmea é um projeto acadêmico de desenvolvimento Front-End voltado à adoção responsável de animais.
 
-A proposta do projeto é aproximar animais que precisam de um novo lar de pessoas interessadas em adotar, além de apresentar formas de participação em ações de doação e voluntariado.
+A proposta da plataforma é aproximar animais que precisam de um novo lar de pessoas interessadas em adotar, além de apresentar formas de participação em ações de doação e voluntariado.
 
 ## 💜 Sobre o projeto
 
-O projeto foi desenvolvido durante uma experiência prática da faculdade, evoluindo por diferentes etapas de construção.
+O projeto foi desenvolvido durante uma experiência prática da faculdade e evoluiu por diferentes etapas de construção.
 
-Ao longo do desenvolvimento foram trabalhados conceitos de HTML semântico, formulários, validação de dados, Design System, Flexbox, CSS Grid, responsividade e componentes de interface.
+Ao longo do desenvolvimento foram trabalhados conceitos de HTML semântico, CSS, JavaScript, formulários, validação de dados, Design System, Flexbox, CSS Grid, responsividade, acessibilidade, armazenamento local, modularização e preparação da aplicação para produção.
 
-A aplicação conta atualmente com três páginas principais:
+A aplicação conta com três páginas principais:
 
-- **Início:** apresentação da AUma Gêmea, informações sobre adoção responsável e contato.
+- **Início:** apresentação da AUma Gêmea, adoção responsável e animais disponíveis.
 - **Projetos:** campanhas, ações, doações, voluntariado e componentes de feedback.
 - **Cadastro:** formulário para pessoas interessadas em participar das ações da plataforma.
 
 ## ✨ Funcionalidades
 
 - Navegação entre diferentes páginas
+- Navegação dinâmica utilizando JavaScript
+- Cards de animais gerados dinamicamente
+- Registro de interesse em animais
 - Menu responsivo para desktop e dispositivos móveis
-- Menu hambúrguer em telas menores
-- Submenu dropdown
 - Layout baseado em Grid de 12 colunas
 - Responsividade para diferentes tamanhos de tela
-- Formulário de cadastro
+- Formulário de cadastro com validação
 - Validação de CPF, telefone, CEP e campos obrigatórios
+- Validação da data de nascimento
+- Cálculo de idade utilizando Day.js
+- Armazenamento de cadastros no localStorage
+- Histórico de cadastros armazenados no navegador
 - Estados visuais de interação nos botões e campos
 - Badges para categorização
 - Alertas informativos e de sucesso
 - Toast de notificação
-- Links para contato por e-mail e telefone
+- Modo de alto contraste
+- Persistência da preferência de alto contraste
+- Recursos de acessibilidade e navegação por teclado
 
 ## 🎨 Design System
 
 Para manter a identidade visual consistente, o projeto utiliza variáveis CSS para padronizar cores, tipografia e espaçamentos.
 
-A identidade visual utiliza principalmente tons de roxo e lilás, acompanhados por uma cor amarela de destaque e cores neutras para fundos, textos e bordas.
+A identidade visual utiliza principalmente tons de roxo e lilás, acompanhados por amarelo como cor de destaque e cores neutras para fundos, textos e bordas.
 
 A tipografia utilizada é **Arial**, com diferentes tamanhos definidos de acordo com a hierarquia das informações.
+
+O projeto também possui uma versão de alto contraste, com fundo preto, textos brancos e elementos de destaque amarelos.
 
 ## 📱 Responsividade
 
 O layout foi desenvolvido utilizando **Flexbox** e **CSS Grid**.
 
-A estrutura principal utiliza um Grid de 12 colunas e possui breakpoints para adaptação em:
+A estrutura principal utiliza um Grid de 12 colunas e possui cinco faixas responsivas para adaptação a diferentes tamanhos de tela:
 
 - celulares pequenos;
 - celulares;
@@ -54,23 +63,29 @@ A estrutura principal utiliza um Grid de 12 colunas e possui breakpoints para ad
 - notebooks;
 - desktops.
 
-Em dispositivos móveis, a navegação horizontal é substituída por um menu hambúrguer, permitindo aproveitar melhor o espaço disponível na tela.
+Em dispositivos móveis, a navegação é adaptada para melhor aproveitamento do espaço disponível.
 
 ## 🛠️ Tecnologias utilizadas
 
 - HTML5
 - CSS3
+- JavaScript
+- ES6 Modules
 - Flexbox
 - CSS Grid
 - Media Queries
+- localStorage
+- Day.js
+- Node.js e npm
+- Vite 8.3.1
 - Git
 - GitHub
 
-O projeto foi desenvolvido sem frameworks ou bibliotecas externas, utilizando recursos nativos de HTML e CSS.
+O projeto utiliza JavaScript sem frameworks de interface. O **Day.js** é utilizado como biblioteca externa para manipulação de datas e o **Vite** é utilizado como ferramenta de desenvolvimento e preparação da aplicação para produção.
 
 ## 📂 Estrutura do projeto
 
-    aumagemea/
+    AumaGemea/
     │
     ├── css/
     │   └── style.css
@@ -78,24 +93,90 @@ O projeto foi desenvolvido sem frameworks ou bibliotecas externas, utilizando re
     ├── img/
     │   └── animais-adocao.jpg
     │
+    ├── js/
+    │   ├── animais.js
+    │   ├── contraste.js
+    │   ├── formulario.js
+    │   ├── main.js
+    │   ├── spa.js
+    │   └── storage.js
+    │
+    ├── .gitignore
     ├── cadastro.html
     ├── index.html
+    ├── package.json
+    ├── package-lock.json
     ├── projetos.html
-    └── README.md
+    ├── README.md
+    └── vite.config.js
+
+As pastas `node_modules/` e `dist/` são geradas localmente e não são versionadas no repositório.
+
+## 🚀 Instalação e execução
+
+É necessário possuir **Node.js** e **npm** instalados.
+
+Clone o repositório:
+
+    git clone https://github.com/gabrieligardini/criacao-ong.git
+
+Acesse a pasta do projeto:
+
+    cd criacao-ong
+
+Instale as dependências:
+
+    npm install
+
+Inicie o ambiente de desenvolvimento:
+
+    npm run dev
+
+Para gerar a versão de produção:
+
+    npm run build
+
+Para visualizar localmente a build de produção:
+
+    npm run preview
+
+A build otimizada é gerada na pasta `dist/`.
+
+## ⚙️ Build de produção
+
+O projeto utiliza **Vite 8.3.1** para preparar a aplicação para produção.
+
+A configuração possui múltiplas entradas para as páginas `index.html`, `projetos.html` e `cadastro.html`. Durante a build, os módulos JavaScript e os arquivos CSS são processados e otimizados para distribuição.
+
+Nos testes realizados, a build de produção manteve as funcionalidades da aplicação funcionando normalmente.
 
 ## ♿ Semântica e acessibilidade
 
-Durante o desenvolvimento, foram utilizados elementos semânticos como `header`, `nav`, `main`, `section` e `footer`.
+Foram utilizados elementos semânticos como `header`, `nav`, `main`, `section` e `footer`.
 
-Também foram aplicados recursos como textos alternativos em imagens, labels associados aos campos dos formulários, hierarquia de títulos e atributos de validação nativos do HTML.
+Também foram aplicados textos alternativos em imagens, labels associados aos campos dos formulários, hierarquia de títulos, validações nativas do HTML, estados de foco e atributos ARIA.
+
+O modo de alto contraste pode ser ativado pelo usuário e sua preferência é armazenada no `localStorage`, permanecendo ativa durante a navegação e após a atualização da página.
+
+## 🌿 Versionamento
+
+O projeto utiliza Git e GitHub para controle de versão, com fluxo baseado em branches como:
+
+- `main`
+- `develop`
+- `feature/*`
+
+As alterações são organizadas utilizando Conventional Commits e o versionamento segue os princípios do Semantic Versioning.
+
+A primeira versão estável do projeto foi publicada como **v1.0.0**.
 
 ## 🎓 Aprendizados
 
-O desenvolvimento deste projeto permitiu colocar em prática diferentes conhecimentos de Front-End em uma aplicação completa.
+O desenvolvimento deste projeto permitiu aplicar diferentes conhecimentos de Front-End em uma aplicação completa.
 
-Além da construção das páginas, o projeto ajudou a desenvolver uma visão mais ampla sobre organização de código, consistência visual, responsividade, experiência do usuário e importância do feedback visual nas interfaces.
+Além da construção da interface, o projeto proporcionou experiência com modularização do JavaScript, manipulação do DOM, eventos, armazenamento local, bibliotecas externas, acessibilidade, GitFlow, versionamento e preparação de uma aplicação para produção.
 
-Também foi uma oportunidade de perceber a importância de planejar a estrutura do projeto antes de adicionar novas funcionalidades, facilitando sua manutenção e evolução.
+Também foi possível praticar depuração e resolução de problemas reais durante a evolução do projeto, contribuindo para uma melhor organização e manutenção do código.
 
 ## 👩‍💻 Desenvolvido por
 
