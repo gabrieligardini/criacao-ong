@@ -1,0 +1,424 @@
+:root {
+    /* Cores principais */
+    --cor-primaria: #6C4AB6;
+    --cor-primaria-escura: #4A3280;
+    --cor-secundaria: #9D7AD9;
+    --cor-destaque: #F4B942;
+
+    /* Cores neutras */
+    --cor-fundo: #F8F7FC;
+    --cor-superficie: #FFFFFF;
+    --cor-texto: #29262F;
+    --cor-texto-suave: #625D6B;
+    --cor-borda: #DDD8E8;
+
+    /* Tipografia */
+    --fonte-principal: Arial, sans-serif;
+
+    --texto-pequeno: 0.875rem;
+    --texto-normal: 1rem;
+    --texto-medio: 1.25rem;
+    --texto-grande: 1.75rem;
+    --texto-titulo: 2.5rem;
+
+    /* Espaçamentos */
+    --espaco-1: 0.5rem;
+    --espaco-2: 1rem;
+    --espaco-3: 1.5rem;
+    --espaco-4: 2rem;
+    --espaco-5: 3rem;
+}
+
+/* Estilos gerais */
+body {
+    margin: 0;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    font-family: var(--fonte-principal);
+    font-size: var(--texto-normal);
+}
+
+p {
+    line-height: 1.6;
+}
+
+h2 {
+    font-size: var(--texto-grande);
+    color: var(--cor-primaria-escura);
+}
+
+h3 {
+    font-size: var(--texto-medio);
+    color: var(--cor-primaria);
+}
+
+/* Cabeçalho com Flexbox */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--espaco-3);
+    padding: var(--espaco-3) var(--espaco-4);
+    background-color: var(--cor-primaria);
+    color: white;
+}
+
+header h1,
+header p {
+    color: white;
+}
+
+header h1 {
+    font-size: var(--texto-titulo);
+}
+
+/* Menu de navegação com Flexbox */
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: var(--espaco-2);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Conteúdo principal */
+main {
+    padding: var(--espaco-4);
+}
+
+section {
+    margin-bottom: var(--espaco-5);
+}
+
+main a {
+    color: var(--cor-primaria-escura);
+}
+
+/* Imagem */
+.imagem-adocao {
+    width: 100%;
+    max-width: 700px;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+    margin: var(--espaco-3) auto;
+    border-radius: 12px;
+}
+
+/* Grid de 12 colunas */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--espaco-2);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.grid-conteudo {
+    grid-column: 2 / 12;
+}
+
+/* Rodapé */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--espaco-3);
+    background-color: var(--cor-primaria-escura);
+    color: white;
+}
+
+footer a {
+    color: white;
+}
+
+/* 1 - Celulares pequenos */
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .grid {
+        grid-template-columns: repeat(12, 1fr);
+        gap: var(--espaco-1);
+    }
+
+    .grid-conteudo {
+        grid-column: 1 / 13;
+    }
+
+    main {
+        padding: var(--espaco-2);
+    }
+
+    .imagem-adocao {
+        height: auto;
+    }
+}
+
+/* 2 - Celulares */
+@media (min-width: 481px) and (max-width: 767px) {
+    .grid-conteudo {
+        grid-column: 1 / 13;
+    }
+
+    main {
+        padding: var(--espaco-3);
+    }
+}
+
+/* 3 - Tablets */
+@media (min-width: 768px) and (max-width: 991px) {
+    .grid-conteudo {
+        grid-column: 2 / 12;
+    }
+}
+
+/* 4 - Notebooks */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .grid-conteudo {
+        grid-column: 2 / 12;
+    }
+}
+
+/* 5 - Desktops */
+@media (min-width: 1200px) {
+    .grid-conteudo {
+        grid-column: 2 / 12;
+    }
+}
+
+/* Navegação desktop */
+.menu-desktop {
+    display: flex;
+    align-items: center;
+    gap: var(--espaco-2);
+    list-style: none;
+}
+
+.menu-desktop a,
+.menu-desktop summary {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.submenu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 180px;
+    padding: var(--espaco-2);
+    background-color: var(--cor-superficie);
+    border: 1px solid var(--cor-borda);
+    border-radius: 8px;
+    list-style: none;
+    z-index: 10;
+}
+
+.submenu a {
+    color: var(--cor-primaria-escura);
+}
+
+.submenu a:hover {
+    text-decoration: underline;
+}
+
+/* Menu mobile oculto no desktop */
+.menu-mobile {
+    display: none;
+}
+
+/* Menu hambúrguer */
+@media (max-width: 767px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu-desktop {
+        display: none;
+    }
+
+    .menu-mobile {
+        display: block;
+        width: 100%;
+    }
+
+    .menu-mobile summary {
+        color: white;
+        cursor: pointer;
+        padding: var(--espaco-1);
+    }
+
+    .menu-mobile ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--espaco-2);
+        list-style: none;
+        padding: var(--espaco-2);
+        margin: 0;
+    }
+
+    .menu-mobile a {
+        color: white;
+        text-decoration: none;
+    }
+}
+
+/* Botões e estados interativos */
+button {
+    padding: var(--espaco-2) var(--espaco-3);
+    background-color: var(--cor-primaria);
+    color: white;
+    border: 2px solid var(--cor-primaria);
+    border-radius: 8px;
+    font-family: var(--fonte-principal);
+    font-size: var(--texto-normal);
+    cursor: pointer;
+    transition: background-color 0.2s ease,
+                border-color 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+button:hover {
+    background-color: var(--cor-primaria-escura);
+    border-color: var(--cor-primaria-escura);
+}
+
+button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px var(--cor-secundaria);
+}
+
+button:active {
+    background-color: var(--cor-secundaria);
+    border-color: var(--cor-secundaria);
+}
+
+button:disabled {
+    background-color: var(--cor-borda);
+    border-color: var(--cor-borda);
+    color: var(--cor-texto-suave);
+    cursor: not-allowed;
+}
+
+/* Campos do formulário */
+input,
+select {
+    padding: var(--espaco-1);
+    margin: var(--espaco-1) 0 var(--espaco-2);
+    border: 2px solid var(--cor-borda);
+    border-radius: 6px;
+    font-family: var(--fonte-principal);
+    font-size: var(--texto-normal);
+    transition: border-color 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: var(--cor-primaria);
+    box-shadow: 0 0 0 2px var(--cor-secundaria);
+}
+
+input:valid {
+    border-color: #2E7D32;
+}
+
+input:invalid:not(:placeholder-shown) {
+    border-color: #C62828;
+}
+
+/* Componentes de feedback */
+.feedback-exemplos {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espaco-3);
+}
+
+.feedback-item {
+    padding: var(--espaco-3);
+    background-color: var(--cor-superficie);
+    border: 1px solid var(--cor-borda);
+    border-radius: 10px;
+}
+
+/* Badges */
+.badge {
+    display: inline-block;
+    padding: 0.4rem 0.8rem;
+    margin: var(--espaco-1);
+    border-radius: 20px;
+    font-size: var(--texto-pequeno);
+    font-weight: bold;
+}
+
+.badge-adocao {
+    background-color: var(--cor-primaria);
+    color: white;
+}
+
+.badge-doacao {
+    background-color: var(--cor-destaque);
+    color: var(--cor-texto);
+}
+
+.badge-voluntariado {
+    background-color: var(--cor-secundaria);
+    color: white;
+}
+
+/* Alertas */
+.alerta {
+    padding: var(--espaco-2);
+    margin-bottom: var(--espaco-2);
+    border-radius: 8px;
+    border-left: 5px solid;
+}
+
+.alerta-info {
+    background-color: #EEE8FA;
+    border-color: var(--cor-primaria);
+    color: var(--cor-primaria-escura);
+}
+
+.alerta-sucesso {
+    background-color: #E8F5E9;
+    border-color: #2E7D32;
+    color: #1B5E20;
+}
+
+/* Toast */
+.toast {
+    max-width: 400px;
+    padding: var(--espaco-2);
+    background-color: var(--cor-primaria-escura);
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.toast p {
+    margin-bottom: 0;
+}

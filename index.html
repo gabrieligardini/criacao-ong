@@ -9,6 +9,7 @@
         content="AUma Gêmea: conectando animais que precisam de um lar a pessoas interessadas em adoção responsável.">
 
     <title>AUma Gêmea | Adoção Responsável</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -21,84 +22,107 @@
         </div>
 
         <nav aria-label="Navegação principal">
-            <ul>
+            <details class="menu-mobile">
+                <summary aria-label="Abrir ou fechar menu">☰ Menu</summary>
+                <ul>
+                    <li><a href="#sobre">Sobre nós</a></li>
+                    <li><a href="#adocao">Adoção</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                    <li><a href="projetos.html">Projetos</a></li>
+                    <li><a href="cadastro.html">Cadastro</a></li>
+                </ul>
+            </details>
+
+            <ul class="menu-desktop">
                 <li><a href="#sobre">Sobre nós</a></li>
-                <li><a href="#adocao">Adoção</a></li>
+
+                <li class="dropdown">
+                    <details>
+                        <summary>Adoção</summary>
+                        <ul class="submenu">
+                            <li><a href="#adocao">Adoção responsável</a></li>
+                            <li><a href="projetos.html">Projetos</a></li>
+                        </ul>
+                    </details>
+                </li>
+
                 <li><a href="#contato">Contato</a></li>
-                <li><a href="projetos.html">Projetos</a></li>
                 <li><a href="cadastro.html">Cadastro</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- Conteúdo principal -->
-    <main>
+    <main class="grid">
 
-        <!-- Apresentação -->
-        <section id="sobre">
-            <h2>Encontre seu novo melhor amigo</h2>
+        <div class="grid-conteudo">
 
-            <img
-                src="img/animais-adocao.jpg"
-                alt="Cachorro e gato esperando por uma família para adoção">
+            <!-- Apresentação -->
+            <section id="sobre">
+                <h2>Encontre seu novo melhor amigo</h2>
 
-            <p>
-                A AUma Gêmea é uma plataforma criada para aproximar
-                pessoas interessadas em adotar de animais que precisam
-                de um novo lar.
-            </p>
+                <img class="imagem-adocao" src="img/animais-adocao.jpg"
+                    alt="Cachorro e gato esperando por uma família para adoção">
 
-            <p>
-                Nosso objetivo é incentivar a adoção responsável,
-                considerando as características e necessidades de cada
-                animal para ajudar a encontrar uma família compatível.
-            </p>
-        </section>
-
-        <!-- Adoção -->
-        <section id="adocao">
-            <h2>Adoção responsável</h2>
-
-            <p>
-                Adotar é assumir um compromisso. Por isso, buscamos
-                tornar esse processo mais consciente e facilitar a
-                conexão entre adotantes e animais.
-            </p>
-
-            <h3>Por que adotar?</h3>
-
-            <p>
-                A adoção oferece uma nova oportunidade para animais que
-                aguardam por uma família e contribui para reduzir o
-                abandono e a superlotação das instituições.
-            </p>
-        </section>
-
-        <!-- Contato -->
-        <section id="contato">
-            <h2>Entre em contato</h2>
-
-            <address>
                 <p>
-                    <strong>E-mail:</strong>
-                    <a href="mailto:contato@aumagemea.com.br">
-                        contato@aumagemea.com.br
-                    </a>
+                    A AUma Gêmea é uma plataforma criada para aproximar
+                    pessoas interessadas em adotar de animais que precisam
+                    de um novo lar.
                 </p>
 
                 <p>
-                    <strong>Telefone:</strong>
-                    <a href="tel:+5511999999999">
-                        (11) 99999-9999
-                    </a>
+                    Nosso objetivo é incentivar a adoção responsável,
+                    considerando as características e necessidades de cada
+                    animal para ajudar a encontrar uma família compatível.
                 </p>
+            </section>
+
+            <!-- Adoção -->
+            <section id="adocao">
+                <h2>Adoção responsável</h2>
 
                 <p>
-                    <strong>Localização:</strong>
-                    São Paulo - SP
+                    Adotar é assumir um compromisso. Por isso, buscamos
+                    tornar esse processo mais consciente e facilitar a
+                    conexão entre adotantes e animais.
                 </p>
-            </address>
-        </section>
+
+                <h3>Por que adotar?</h3>
+
+                <p>
+                    A adoção oferece uma nova oportunidade para animais que
+                    aguardam por uma família e contribui para reduzir o
+                    abandono e a superlotação das instituições.
+                </p>
+            </section>
+
+            <!-- Contato -->
+            <section id="contato">
+                <h2>Entre em contato</h2>
+
+                <address>
+                    <p>
+                        <strong>E-mail:</strong>
+                        <a href="mailto:contato@aumagemea.com.br">
+                            contato@aumagemea.com.br
+                        </a>
+                    </p>
+
+                    <p>
+                        <strong>Telefone:</strong>
+                        <a href="tel:+5511999999999">
+                            (11) 99999-9999
+                        </a>
+                    </p>
+
+                    <p>
+                        <strong>Localização:</strong>
+                        São Paulo - SP
+                    </p>
+                </address>
+            </section>
+
+        </div>
 
     </main>
 

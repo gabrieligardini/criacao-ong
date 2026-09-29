@@ -9,6 +9,7 @@
         content="Conheça os projetos da AUma Gêmea e saiba como contribuir por meio de doações ou trabalho voluntário.">
 
     <title>Projetos | AUma Gêmea</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -21,88 +22,155 @@
         </div>
 
         <nav aria-label="Navegação principal">
-            <ul>
+
+            <details class="menu-mobile">
+                <summary aria-label="Abrir ou fechar menu">☰ Menu</summary>
+
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="#projetos">Projetos</a></li>
+                    <li><a href="#doacoes">Doações</a></li>
+                    <li><a href="#voluntariado">Voluntariado</a></li>
+                    <li><a href="cadastro.html">Cadastro</a></li>
+                </ul>
+            </details>
+
+            <ul class="menu-desktop">
                 <li><a href="index.html">Início</a></li>
+
+                <li class="dropdown">
+                    <details>
+                        <summary>Participar</summary>
+
+                        <ul class="submenu">
+                            <li><a href="#doacoes">Doações</a></li>
+                            <li><a href="#voluntariado">Voluntariado</a></li>
+                        </ul>
+                    </details>
+                </li>
+
                 <li><a href="#projetos">Projetos</a></li>
-                <li><a href="#doacoes">Doações</a></li>
-                <li><a href="#voluntariado">Voluntariado</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
             </ul>
+
         </nav>
     </header>
 
     <!-- Conteúdo principal -->
-    <main>
+    <main class="grid">
 
-        <!-- Projetos e ações -->
-        <section id="projetos">
-            <h2>Projetos e ações</h2>
+        <div class="grid-conteudo">
 
-            <p>
-                A AUma Gêmea desenvolve ações para incentivar a adoção
-                responsável e apoiar animais que aguardam por uma nova família.
-            </p>
+            <!-- Projetos e ações -->
+            <section id="projetos">
+                <h2>Projetos e ações</h2>
 
-            <h3>Campanhas de adoção</h3>
+                <p>
+                    A AUma Gêmea desenvolve ações para incentivar a adoção
+                    responsável e apoiar animais que aguardam por uma nova família.
+                </p>
 
-            <p>
-                Nossas campanhas ajudam a divulgar animais disponíveis
-                para adoção e aproximá-los de pessoas interessadas em
-                oferecer um lar responsável.
-            </p>
+                <h3>Campanhas de adoção</h3>
 
-            <h3>Conscientização</h3>
+                <p>
+                    Nossas campanhas ajudam a divulgar animais disponíveis
+                    para adoção e aproximá-los de pessoas interessadas em
+                    oferecer um lar responsável.
+                </p>
 
-            <p>
-                Também compartilhamos informações sobre guarda responsável,
-                cuidados com os animais e a importância de combater
-                o abandono.
-            </p>
-        </section>
+                <h3>Conscientização</h3>
 
-        <!-- Doações -->
-        <section id="doacoes">
-            <h2>Faça uma doação</h2>
+                <p>
+                    Também compartilhamos informações sobre guarda responsável,
+                    cuidados com os animais e a importância de combater
+                    o abandono.
+                </p>
+            </section>
 
-            <p>
-                As doações ajudam a apoiar ações voltadas ao cuidado,
-                alimentação, saúde e bem-estar dos animais atendidos
-                pelos projetos parceiros.
-            </p>
+            <!-- Doações -->
+            <section id="doacoes">
+                <h2>Faça uma doação</h2>
 
-            <h3>Como contribuir?</h3>
+                <p>
+                    As doações ajudam a apoiar ações voltadas ao cuidado,
+                    alimentação, saúde e bem-estar dos animais atendidos
+                    pelos projetos parceiros.
+                </p>
 
-            <p>
-                Você pode contribuir financeiramente com nossas campanhas
-                ou ajudar com itens necessários para os animais.
-            </p>
+                <h3>Como contribuir?</h3>
 
-            <a href="mailto:contato@aumagemea.com.br?subject=Quero%20fazer%20uma%20doação">
-                Quero fazer uma doação
-            </a>
-        </section>
+                <p>
+                    Você pode contribuir financeiramente com nossas campanhas
+                    ou ajudar com itens necessários para os animais.
+                </p>
 
-        <!-- Voluntariado -->
-        <section id="voluntariado">
-            <h2>Seja voluntário</h2>
+                <a href="mailto:contato@aumagemea.com.br?subject=Quero%20fazer%20uma%20doação">
+                    Quero fazer uma doação
+                </a>
+            </section>
 
-            <p>
-                O trabalho voluntário é uma das formas de contribuir com
-                nossas ações e ajudar animais que estão esperando por
-                uma nova oportunidade.
-            </p>
+            <!-- Voluntariado -->
+            <section id="voluntariado">
+                <h2>Seja voluntário</h2>
 
-            <h3>Como participar?</h3>
+                <p>
+                    O trabalho voluntário é uma das formas de contribuir com
+                    nossas ações e ajudar animais que estão esperando por
+                    uma nova oportunidade.
+                </p>
 
-            <p>
-                Entre em contato conosco para conhecer as atividades
-                disponíveis e descobrir como você pode colaborar de
-                acordo com sua disponibilidade.
-            </p>
+                <h3>Como participar?</h3>
 
-            <a href="mailto:contato@aumagemea.com.br?subject=Quero%20ser%20voluntário">
-                Quero ser voluntário
-            </a>
-        </section>
+                <p>
+                    Entre em contato conosco para conhecer as atividades
+                    disponíveis e descobrir como você pode colaborar de
+                    acordo com sua disponibilidade.
+                </p>
+
+                <a href="mailto:contato@aumagemea.com.br?subject=Quero%20ser%20voluntário">
+                    Quero ser voluntário
+                </a>
+            </section>
+
+            <!-- Componentes de feedback -->
+            <section id="feedback">
+                <h2>Atualizações dos projetos</h2>
+
+                <div class="feedback-exemplos">
+
+                    <div class="feedback-item">
+                        <h3>Etiquetas dos projetos</h3>
+
+                        <span class="badge badge-adocao">Adoção</span>
+                        <span class="badge badge-doacao">Doações</span>
+                        <span class="badge badge-voluntariado">Voluntariado</span>
+                    </div>
+
+                    <div class="feedback-item">
+                        <h3>Avisos importantes</h3>
+
+                        <div class="alerta alerta-info" role="alert">
+                            Novas campanhas de adoção serão divulgadas em breve.
+                        </div>
+
+                        <div class="alerta alerta-sucesso" role="alert">
+                            Cadastro enviado com sucesso!
+                        </div>
+                    </div>
+
+                    <div class="feedback-item">
+                        <h3>Notificação</h3>
+
+                        <div class="toast" role="status">
+                            <strong>Obrigado por participar!</strong>
+                            <p>Seu interesse em ajudar a AUma Gêmea foi registrado.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+        </div>
 
     </main>
 
