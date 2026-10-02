@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/gabrieligardini/criacao-ong#readme",
   "devDependencies": {
+    "sharp": "^0.35.5",
     "vite": "^8.3.1"
   },
   "type": "module"
