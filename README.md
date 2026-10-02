@@ -91,7 +91,7 @@ O projeto utiliza JavaScript sem frameworks de interface. O **Day.js** é utiliz
     │   └── style.css
     │
     ├── img/
-    │   └── animais-adocao.jpg
+    │   └── animais-adocao.webp
     │
     ├── js/
     │   ├── animais.js

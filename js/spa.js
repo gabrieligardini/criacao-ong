@@ -15,7 +15,7 @@ export function iniciarSPA() {
 
                 <img
                     class="imagem-adocao"
-                    src="img/animais-adocao.jpg"
+                    src="img/animais-adocao.webp"
                     alt="Cachorro e gato esperando por uma família para adoção">
 
                 <p>
