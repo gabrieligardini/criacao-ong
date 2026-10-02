@@ -57,13 +57,13 @@ O layout foi desenvolvido utilizando **Flexbox** e **CSS Grid**.
 
 A estrutura principal utiliza um Grid de 12 colunas e possui cinco faixas responsivas para adaptação a diferentes tamanhos de tela:
 
-- celulares pequenos;
-- celulares;
-- tablets;
-- notebooks;
-- desktops.
+- **Até 480px:** `.grid-conteudo` ocupa as 12 colunas (`1 / 13`), utilizando toda a largura disponível, com redução dos espaçamentos.
+- **De 481px a 767px:** `.grid-conteudo` continua ocupando as 12 colunas (`1 / 13`).
+- **De 768px a 991px:** `.grid-conteudo` ocupa da coluna 2 até a 12 (`2 / 12`), mantendo margens laterais.
+- **De 992px a 1199px:** o conteúdo mantém a distribuição `2 / 12`.
+- **A partir de 1200px:** o conteúdo mantém a distribuição `2 / 12`, dentro do limite máximo de 1200px definido para o Grid.
 
-Em dispositivos móveis, a navegação é adaptada para melhor aproveitamento do espaço disponível.
+Em telas de até 767px, o menu de desktop é ocultado e substituído por um menu mobile implementado com `<details>` e `<summary>`. Nesse mesmo intervalo, a lista de animais passa de três colunas para uma única coluna, fazendo os cards serem empilhados verticalmente.
 
 ## 🛠️ Tecnologias utilizadas
 
@@ -168,7 +168,7 @@ O projeto utiliza Git e GitHub para controle de versão, com fluxo baseado em br
 
 As alterações são organizadas utilizando Conventional Commits e o versionamento segue os princípios do Semantic Versioning.
 
-A primeira versão estável do projeto foi publicada como **v1.0.0**.
+A primeira versão estável do projeto foi publicada como **v1.0.0**. Posteriormente, a versão **v1.1.0** incorporou melhorias de acessibilidade, preparação da aplicação para produção com Vite e otimização da imagem principal para WebP.
 
 ## 🎓 Aprendizados
 
