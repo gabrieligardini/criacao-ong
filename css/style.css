@@ -299,6 +299,18 @@ footer a {
         width: 100%;
     }
 
+    .menu-mobile summary:focus-visible {
+        outline: 3px solid var(--cor-destaque);
+        outline-offset: 3px;
+        border-radius: 6px;
+    }
+
+    .menu-mobile[open] summary {
+        background-color: var(--cor-primaria-escura);
+        color: white;
+        border-radius: 6px;
+    }
+
     .menu-mobile summary {
         color: white;
         cursor: pointer;
@@ -332,8 +344,8 @@ button {
     font-size: var(--texto-normal);
     cursor: pointer;
     transition: background-color 0.2s ease,
-                border-color 0.2s ease,
-                box-shadow 0.2s ease;
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
 }
 
 button:hover {
@@ -368,7 +380,7 @@ select {
     font-family: var(--fonte-principal);
     font-size: var(--texto-normal);
     transition: border-color 0.2s ease,
-                box-shadow 0.2s ease;
+        box-shadow 0.2s ease;
 }
 
 input:focus,
